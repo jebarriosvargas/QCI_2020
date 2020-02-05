@@ -1,0 +1,282 @@
+---
+redirect_from:
+  - "/cap1-eqnsch/cap1-ejercicio"
+interact_link: content/Cap1_EqnSch/Cap1_Ejercicio.ipynb
+kernel_name: python3
+kernel_path: content/Cap1_EqnSch
+has_widgets: false
+title: |-
+  Ejercicio probabilidad
+pagenum: 2
+prev_page:
+  url: /Cap1_EqnSch/EqnSch.html
+next_page:
+  url: /Cap2_EqnSch/Cap2_Intro.html
+suffix: .ipynb
+search: x la rm nm de partcula en eqnarray el psi posicin y encuentre intervalo una begin t frac e end donde tiempo es que bigg dimensin tiene displaystyle sqrt al medida encuentra probabilida encontrar entre b probabilidad medir c verifique est normalizada considere un sistema cuya funcin estado fijo pi ax se trate como infinitesimal
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Ejercicio probabilidad</div>
+</div>
+    
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
+<span class="c1"># from pylab import *</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Populating the interactive namespace from numpy and matplotlib
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Una partícula en una dimensión tiene</p>
+\begin{eqnarray}
+\displaystyle \Psi(x,t=0)=\frac{1}{\sqrt{a}} e^{-|x|/a }\,,
+\end{eqnarray}<p>donde $a =1.0000\,{\rm nm}$. Al tiempo $t=0$ la posición de la partícula es medida.</p>
+<p>(a) Encuentra la probabilida de encontrar a la partícula entre $x = 1.5000\,{\rm nm}$ y $x =1.5001\,{\rm nm}$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.0</span>     <span class="c1"># nm</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1.5000</span>  <span class="c1"># nm</span>
+<span class="n">Ψ</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Ψ(x=</span><span class="si">{0:.4f}</span><span class="s2"> nm,t=0) = </span><span class="si">{1:.5f}</span><span class="s2"> 1/nm</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Ψ</span><span class="p">))</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1.5001</span>  <span class="c1"># nm</span>
+<span class="n">Ψ</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Ψ(x=</span><span class="si">{0:.4f}</span><span class="s2"> nm,t=0) = </span><span class="si">{1:.5f}</span><span class="s2"> 1/nm</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Ψ</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ψ(x=1.5000 nm,t=0) = 0.22313 1/nm
+
+Ψ(x=1.5001 nm,t=0) = 0.22311 1/nm
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(b) Encuentre la probabilidad de medir la posición de la partícula en el intervalo $x=0$ y $x=2\,{\rm nm}$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x</span>    <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span><span class="n">xmax</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">Ψ</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Ψ2</span>   <span class="o">=</span> <span class="n">Ψ</span><span class="o">*</span><span class="n">Ψ</span>
+<span class="n">Int</span>  <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span><span class="n">Ψ2</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Pr(0&lt;x&lt;2) = </span><span class="si">{0:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Int</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pr(0&lt;x&lt;2) = 0.4908
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(c) Verifique que $\Psi$ está normalizada</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1000</span><span class="p">;</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">x</span>    <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span><span class="n">xmax</span><span class="p">,</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">Ψ</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Ψ2</span>   <span class="o">=</span> <span class="n">Ψ</span><span class="o">*</span><span class="n">Ψ</span>
+<span class="n">Pr</span>   <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span><span class="n">Ψ2</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Pr(-\infty&lt;x&lt;\infty) = </span><span class="si">{0:.7f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Pr</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pr(-\infty&lt;x&lt;\infty) = 0.9999333
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Considere un sistema cuya función de estado en el tiempo fijo es
+\begin{eqnarray}
+\Psi = \bigg( \frac{32 a^3}{\pi} \bigg)^{1/4} x e^{-ax^2}\,,
+\end{eqnarray}
+donde $a=1.0000\,{\rm nm^{-2}}$, encuentre la posición de que se encuentre la partícula en el intervalo $x=1.2000\,{\rm nm}$ y $x=1.2001\,{\rm nm}$. Trate el intervalo como infinitesimal.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span>  <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># nm^-2</span>
+<span class="n">x</span>  <span class="o">=</span> <span class="mf">1.2000</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">1.2001</span> <span class="o">-</span> <span class="n">x</span>
+<span class="n">π</span>  <span class="o">=</span> <span class="n">pi</span>
+<span class="n">Ψ</span>  <span class="o">=</span> <span class="p">((</span><span class="mi">32</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">/</span><span class="n">π</span><span class="p">)</span><span class="o">**</span><span class="mf">0.25</span> <span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+<span class="n">Ψ2</span> <span class="o">=</span> <span class="n">Ψ</span><span class="o">*</span><span class="n">Ψ</span>
+<span class="n">Pr</span> <span class="o">=</span> <span class="n">Ψ2</span><span class="o">*</span><span class="n">dx</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;|Ψ|^2 dx = </span><span class="si">{0:.7f}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Pr</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|Ψ|^2 dx = 0.0000258
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
